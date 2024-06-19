@@ -9,6 +9,8 @@ import ControlanUncontrol from './controlanduncontrolcomp/ControlanUncontrol';
 import A from './comp/A';
 import AuthContext from './context/AuthContext';
 import ProductContext from './context/ProductContext';
+import Todo from './comp/Todo';
+import TodoContext from './context/todoContext';
 function App() {
   return (
     <>
@@ -20,11 +22,14 @@ function App() {
       {/* <Condition data="utsav"/> */}
       {/* <Loop/> */}
       {/* <ControlanUncontrol/> */}
-         <AuthContext>
+         {/* <AuthContext>
          <ProductContext>
                <A />
           </ProductContext>
-          </AuthContext>
+          </AuthContext> */}
+          <TodoContext>
+          <Todo/>
+          </TodoContext>
     </>
   )
 }
