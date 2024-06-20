@@ -12,6 +12,7 @@ import ProductContext from './context/ProductContext';
 import Todo from './comp/Todo';
 import TodoContext from './context/todoContext';
 import { ExampleOfLC } from './lyfeCyckeMethod/ExampleOfLC';
+import FunctionLifeCycle from './lyfeCyckeMethod/FunctionLifeCycle';
 function App() {
   let [name,setname]=useState('utsav')
   return (
@@ -32,11 +33,12 @@ function App() {
           {/* <TodoContext>
           <Todo/>
           </TodoContext> */}
-          <ExampleOfLC name={name}/>
+          {/* <ExampleOfLC name={name}/>
           <button onClick={()=>{
            let y= prompt('enter your name')
            setname(y)
-          }}>click</button>
+          }}>click</button> */}
+          <FunctionLifeCycle/>
     </>
   )
 }
