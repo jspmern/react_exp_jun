@@ -11,7 +11,9 @@ import AuthContext from './context/AuthContext';
 import ProductContext from './context/ProductContext';
 import Todo from './comp/Todo';
 import TodoContext from './context/todoContext';
+import { ExampleOfLC } from './lyfeCyckeMethod/ExampleOfLC';
 function App() {
+  let [name,setname]=useState('utsav')
   return (
     <>
       {/* <Props > 
@@ -27,9 +29,14 @@ function App() {
                <A />
           </ProductContext>
           </AuthContext> */}
-          <TodoContext>
+          {/* <TodoContext>
           <Todo/>
-          </TodoContext>
+          </TodoContext> */}
+          <ExampleOfLC name={name}/>
+          <button onClick={()=>{
+           let y= prompt('enter your name')
+           setname(y)
+          }}>click</button>
     </>
   )
 }
