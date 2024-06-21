@@ -1,0 +1,26 @@
+  //https://code.pieces.app/blog/creating-custom-hooks-reactjs#:~:text=Here%20is%20a%20summary%20of,of%20execution%20of%20the%20hooks.
+// 1.Your custom hook should start with the keyword use, for example, useAuthState, useFetch, etc.
+
+function useApp()
+{
+
+}
+
+//2.Hooks should be called at the top of the component. We should avoid using hooks inside of a condition or a loop because React will be uncertain about the order of execution of the hooks.
+
+ import useAuth form 'hello'
+function App()
+{
+      if(count==0)
+      {
+        useAuth() -incorrect
+      }
+}
+
+//3. Hooks should be called from a function-based component.
+//4.You can call one hook from another hook.
+   function useFetch()
+   {
+    useEffect(()=>{},[]) --correct
+   }
+//5.

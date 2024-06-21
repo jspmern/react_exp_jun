@@ -13,6 +13,10 @@ import Todo from './comp/Todo';
 import TodoContext from './context/todoContext';
 import { ExampleOfLC } from './lyfeCyckeMethod/ExampleOfLC';
 import FunctionLifeCycle from './lyfeCyckeMethod/FunctionLifeCycle';
+import Debouncing from './bonous/Debouncing';
+import CounterProblem from './hook/CounterProblem';
+import LocalStorage from './hook/LocalStorage';
+import Fetch from './hook/Fetch';
 function App() {
   let [name,setname]=useState('utsav')
   return (
@@ -38,7 +42,11 @@ function App() {
            let y= prompt('enter your name')
            setname(y)
           }}>click</button> */}
-          <FunctionLifeCycle/>
+          {/* <FunctionLifeCycle/> */}
+          {/* <Debouncing/> */}
+            {/* <CounterProblem/> */}
+            {/* <LocalStorage/> */}
+            <Fetch/>
     </>
   )
 }
