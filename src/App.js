@@ -17,8 +17,14 @@ import Debouncing from './bonous/Debouncing';
 import CounterProblem from './hook/CounterProblem';
 import LocalStorage from './hook/LocalStorage';
 import Fetch from './hook/Fetch';
+import Product from './hoc/Product';
+import Todos from './hoc/Todos';
+import higherOrderComp from './hoc/higherOrderComp';
+//https://hackernoon.com/mastering-higher-order-components-hocs-in-react
 function App() {
   let [name,setname]=useState('utsav')
+  let NewTodo=higherOrderComp(Todos,'todos')
+  let NewUser=higherOrderComp(Product,'users')
   return (
     <>
       {/* <Props > 
@@ -46,7 +52,13 @@ function App() {
           {/* <Debouncing/> */}
             {/* <CounterProblem/> */}
             {/* <LocalStorage/> */}
-            <Fetch/>
+            {/* <Fetch/> */}
+            {/* <Product/>
+            <h1>.....................</h1>
+             <Todos/> */}
+             <NewTodo/>
+             <h1>;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</h1>
+             <NewUser/>
     </>
   )
 }
