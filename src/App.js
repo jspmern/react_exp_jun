@@ -20,6 +20,11 @@ import Fetch from './hook/Fetch';
 import Product from './hoc/Product';
 import Todos from './hoc/Todos';
 import higherOrderComp from './hoc/higherOrderComp';
+import ErrorModel from './ErrorBoundary/ErrorModel';
+import AError from './ErrorBoundary/AError';
+import BError from './ErrorBoundary/BError';
+import CError from './ErrorBoundary/CError';
+import { ErrorBoundary } from './ErrorBoundary/ErrorBoundary';
 //https://hackernoon.com/mastering-higher-order-components-hocs-in-react
 function App() {
   let [name,setname]=useState('utsav')
@@ -56,9 +61,16 @@ function App() {
             {/* <Product/>
             <h1>.....................</h1>
              <Todos/> */}
-             <NewTodo/>
+             {/* <NewTodo/>
              <h1>;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</h1>
-             <NewUser/>
+             <NewUser/> */}
+             
+                 <AError/>
+                 <BError/>
+                 <ErrorBoundary>
+                  <CError/>
+             </ErrorBoundary>
+              
     </>
   )
 }

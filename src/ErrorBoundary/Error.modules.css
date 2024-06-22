@@ -1,0 +1,11 @@
+.error {
+    background-color: rgba(128, 128, 128, 0.2); /* Transparent grey background */
+    color: #cc0000; /* Red text color */
+    border: 1px solid #cc0000; /* Red border */
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .errorMessage {
+    font-weight: bold;
+  }
