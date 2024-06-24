@@ -27,9 +27,9 @@ import CError from './ErrorBoundary/CError';
 import { ErrorBoundary } from './ErrorBoundary/ErrorBoundary';
 //https://hackernoon.com/mastering-higher-order-components-hocs-in-react
 function App() {
-  let [name,setname]=useState('utsav')
-  let NewTodo=higherOrderComp(Todos,'todos')
-  let NewUser=higherOrderComp(Product,'users')
+  let [name, setname] = useState('utsav')
+  let NewTodo = higherOrderComp(Todos, 'todos')
+  let NewUser = higherOrderComp(Product, 'users')
   return (
     <>
       {/* <Props > 
@@ -40,37 +40,41 @@ function App() {
       {/* <Condition data="utsav"/> */}
       {/* <Loop/> */}
       {/* <ControlanUncontrol/> */}
-         {/* <AuthContext>
+      {/* <AuthContext>
          <ProductContext>
                <A />
           </ProductContext>
           </AuthContext> */}
-          {/* <TodoContext>
+      {/* <TodoContext>
           <Todo/>
           </TodoContext> */}
-          {/* <ExampleOfLC name={name}/>
+      {/* <ExampleOfLC name={name}/>
           <button onClick={()=>{
            let y= prompt('enter your name')
            setname(y)
           }}>click</button> */}
-          {/* <FunctionLifeCycle/> */}
-          {/* <Debouncing/> */}
-            {/* <CounterProblem/> */}
-            {/* <LocalStorage/> */}
-            {/* <Fetch/> */}
-            {/* <Product/>
+      {/* <FunctionLifeCycle/> */}
+      {/* <Debouncing/> */}
+      {/* <CounterProblem/> */}
+      {/* <LocalStorage/> */}
+      {/* <Fetch/> */}
+      {/* <Product/>
             <h1>.....................</h1>
              <Todos/> */}
-             {/* <NewTodo/>
+      {/* <NewTodo/>
              <h1>;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</h1>
              <NewUser/> */}
-             
-                 <AError/>
-                 <BError/>
-                 <ErrorBoundary>
-                  <CError/>
-             </ErrorBoundary>
-              
+      <ErrorBoundary>
+        <AError />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <BError />
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+        <CError />
+      </ErrorBoundary>
+
     </>
   )
 }

@@ -1,5 +1,7 @@
 //https://legacy.reactjs.org/docs/error-boundaries.html
 //https://www.freecodecamp.org/news/effective-error-handling-in-react-applications/
+//https://builtin.com/software-engineering-perspectives/react-error-boundary
+it is not working with event handler
 Asynchronous code (e.g. setTimeout or requestAnimationFrame callbacks)
 Server side rendering
 Errors thrown in the error boundary itself (rather than its children)
