@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { Suspense, createContext, useState } from 'react'
 import Props from './props/Props';
 import ChildProps from './props/ChildProps';
 import Counter from './state/Counter';
@@ -25,8 +25,11 @@ import AError from './ErrorBoundary/AError';
 import BError from './ErrorBoundary/BError';
 import CError from './ErrorBoundary/CError';
 import { ErrorBoundary } from './ErrorBoundary/ErrorBoundary';
+import BroswerCount from './BroswerOptimizationTech/BroswerCount';
+let LazyStatic=React.lazy(()=>import('./LazyLoading/Static'))
 //https://hackernoon.com/mastering-higher-order-components-hocs-in-react
 function App() {
+let obj={name:'utsav',add:"delhi"}
   let [name, setname] = useState('utsav')
   let NewTodo = higherOrderComp(Todos, 'todos')
   let NewUser = higherOrderComp(Product, 'users')
@@ -35,11 +38,11 @@ function App() {
       {/* <Props > 
           <ChildProps data={obj}/>
            </Props> */}
-      {/* <Counter/> */}
-      {/* <ClassCounter/> */}
-      {/* <Condition data="utsav"/> */}
-      {/* <Loop/> */}
-      {/* <ControlanUncontrol/> */}
+      {/* <Counter/>
+      <ClassCounter/>
+      <Condition data="utsav"/>
+      <Loop/>
+      <ControlanUncontrol/> */}
       {/* <AuthContext>
          <ProductContext>
                <A />
@@ -64,16 +67,21 @@ function App() {
       {/* <NewTodo/>
              <h1>;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</h1>
              <NewUser/> */}
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
         <AError />
-      </ErrorBoundary>
-      <ErrorBoundary>
+      </ErrorBoundary> */}
+      {/* <ErrorBoundary>
         <BError />
       </ErrorBoundary>
 
       <ErrorBoundary>
         <CError />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
+       {/* <Suspense fallback="loading........">
+       <LazyStatic/>
+       </Suspense>     */}
+       <BroswerCount/>
+     
 
     </>
   )
